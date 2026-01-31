@@ -1,0 +1,16 @@
+let score = 0;
+
+const box = document.getElementById("box");
+const scoreText = document.getElementById("score");
+
+box.addEventListener("click", () => {
+  score++;
+  scoreText.textContent = score;
+
+  // change color randomly
+  box.style.background =
+    "rgb(" +
+    Math.floor(Math.random() * 255) + "," +
+    Math.floor(Math.random() * 255) + "," +
+    Math.floor(Math.random() * 255) + ")";
+});
